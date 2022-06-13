@@ -82,7 +82,7 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  // Place your code here.
+
   for (let i=0; i < this.length; i++) {
     if (this[i] === searchElement) return i;
   }
@@ -91,7 +91,7 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+ 
   index = -1
   for (let i=0; i < this.length; i++) {
     if (this[i] === searchElement) index = i;
@@ -101,10 +101,20 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+  const keys = [];
+  for (const entry of Object.entries(object)) {
+    // key is the 0th element of entry
+    keys.push(entry[0]);
+  }
+  return keys;
 };
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  const values = [];
+  for (const entry of Object.entries(object)) {
+    // value is the 1st element of entry
+    values.push(entry[1]);
+  }
+  return values;
 };
